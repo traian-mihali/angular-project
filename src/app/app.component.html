@@ -1,21 +1,103 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+<!-- <h1><fa name="cog" animation="spin"></fa> {{ title }} <app-star></app-star></h1> -->
+
+<!-- <bootstrap-card>
+  <ng-container class="heading">
+    <app-star
+      [is-favorite]="post.isFavorite"
+      (change)="onFavoriteChanged($event)"
+    ></app-star>
+    Heading
+  </ng-container>
+  <ng-container class="body">
+    <h3>Body Title</h3>
+    <p>Body Content</p>
+  </ng-container>
+</bootstrap-card>
+<fontawesome-like
+  [isActive]="tweet.isLiked"
+  [likesCount]="tweet.likesCount"
+></fontawesome-like>
+<app-star></app-star>
+<app-input> </app-input>
+<app-courses></app-courses>
+<app-form></app-form> -->
+
+<!-- *ngIf directive-->
+
+<!-- <div *ngIf="courses.length > 0; then listOfCourses; else noCourses"></div>
+<ng-template #listOfCourses> List of courses</ng-template>
+<ng-template #noCourses> No courses found</ng-template> -->
+
+<!-- property binding: hidden attr -->
+
+<!-- <div [hidden]="courses.length === 0">List of Courses</div>
+<div [hidden]="courses.length > 0">No courses found</div> -->
+
+<!-- *ngSwitchCase directive -->
+<!-- 
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      [class.active]="viewMode === 'map'"
+      (click)="viewMode = 'map'"
+      >Map View</a
+    >
   </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      [class.active]="viewMode === 'list'"
+      (click)="viewMode = 'list'"
+      >List View</a
+    >
   </li>
 </ul>
 
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'map'">Map View Content</div>
+  <div *ngSwitchCase="'list'">List View Content</div>
+  <div *ngSwitchDefault>No View Content</div>
+</div> -->
+
+<!-- *ngFor directive -->
+<!-- <button (click)="onAdd()">Add</button>
+
+<ul>
+  <li *ngFor="let course of courses; index as i">
+    {{ i }} - {{ course.name }}
+    <button (click)="onRemove(course)">Remove</button>
+    <button (click)="onChange(course)">Update</button>
+  </li>
+</ul> -->
+
+<!-- <ul>
+  <li *ngFor="let course of courses; even as isEven">
+    {{ course.name }} <span *ngIf="isEven">(Even)</span>
+  </li>
+</ul> -->
+
+<!-- <button (click)="loadBooks()">Load Books</button>
+<br />
+<ul>
+  <li *ngFor="let book of books; trackBy: trackBook">{{ book.name }}</li>
+</ul> -->
+
+<!-- <zippy title="Shipping Details">
+  Shipping Details Content
+</zippy> -->
+
+<!-- <contact-form></contact-form> -->
+<!-- <course-form></course-form> -->
+
+<!-- <new-course-form></new-course-form> -->
+<!-- <signup-form></signup-form> -->
+
+<!-- <change-password></change-password> -->
+<!-- <change-password-form></change-password-form> -->
+
+<!-- <posts></posts> -->
+<!-- <followers></followers> -->
+<navbar></navbar>
+<br />
 <router-outlet></router-outlet>

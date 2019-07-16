@@ -1,0 +1,32 @@
+<!-- <div id="container">
+  <h1>My Followers</h1>
+  <div class="row" *ngFor="let follower of followers">
+    <div class="col">
+      <img
+        src="{{ follower.avatar_url }}"
+        style="max-width: 150px; border-radius: 50%;"
+        alt="github avatar"
+      />
+    </div>
+    <div class="col">
+      <h2>{{ follower.login }}</h2>
+      <a [href]="follower.url">{{ follower.url }}</a>
+    </div>
+  </div>
+</div> -->
+
+<div *ngFor="let follower of followers" class="media">
+  <img
+    [src]="follower.avatar_url"
+    class="avatar align-self-center mr-3"
+    alt="github avatar"
+  />
+  <div class="media-body">
+    <h5 class="mt-0">
+      <a [routerLink]="['/followers', follower.id, follower.login]">{{
+        follower.login
+      }}</a>
+    </h5>
+    <a [href]="follower.url">{{ follower.url }}</a>
+  </div>
+</div>

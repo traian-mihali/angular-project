@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a routerLinkActive="current" class="nav-item nav-link" routerLink="/"
+        >Home</a
+      >
+      <a
+        routerLinkActive="active current"
+        class="nav-item nav-link"
+        routerLink="/followers"
+        [queryParams]="{ page: 1, order: 'newest' }"
+        >Followers <span class="sr-only">(current)</span></a
+      >
+      <a
+        routerLinkActive="active current"
+        class="nav-item nav-link"
+        routerLink="/posts"
+        >Posts</a
+      >
+    </div>
+  </div>
+</nav>
