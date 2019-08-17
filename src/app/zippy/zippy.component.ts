@@ -1,12 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
+import { expandCollapse } from "./zippy.component.animations";
 
 @Component({
-  selector: 'zippy',
-  templateUrl: './zippy.component.html',
-  styleUrls: ['./zippy.component.less']
+  selector: "zippy",
+  templateUrl: "./zippy.component.html",
+  styleUrls: ["./zippy.component.less"],
+  animations: [expandCollapse]
 })
 export class ZippyComponent {
-  @Input('title') title: string;
+  @Input("title") title: string;
 
   isExpanded: boolean;
 
