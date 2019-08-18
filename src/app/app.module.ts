@@ -37,6 +37,7 @@ import { environment } from "../environments/environment";
 import { LogUpdateService } from "./services/log-update.service";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { TodosComponent } from "./todos/todos.component";
+import { InputFormatDirective } from "./input-format.directive";
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { TodosComponent } from "./todos/todos.component";
     NavbarComponent,
     GithubProfileComponent,
     HomeComponent,
-    TodosComponent
+    TodosComponent,
+    InputFormatDirective
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: "serverApp" }),
